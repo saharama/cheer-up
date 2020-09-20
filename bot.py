@@ -21,7 +21,7 @@ async def search_gifs(query):
 		return gif[0].url
 
 	except ApiException as e:
-			return "Exception when calling DefaultApi->gifs_search_get: %s\n" % e
+		return "Exception when calling DefaultApi->gifs_search_get: %s\n" % e
 
 @bot.event
 async def on_message(message):
@@ -39,9 +39,9 @@ async def magic_eight_ball(ctx)
         'Outlook not so good.',
 	]
 
-	gif = awaot search_gifs('cheese')
+	gif = await search_gifs('cheese')
 
-	await ctx.send(randomw.choice(response))
-	await ctx.send('Gif URL : ' + giof)
+	await ctx.send(random.choice(response))
+	await ctx.send('Gif URL : ' + gif)
 
 bot.run(os.environ['DISCORD_TOKEN'])
