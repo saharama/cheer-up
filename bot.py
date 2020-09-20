@@ -14,7 +14,7 @@ async def on_ready():
 
 async def search_gifs(query):
 	try:
-		response = api_instance.gifs_search_get(GIPHY_TOKEN, query, limit=3, rating='g')
+		response = api_instance.gifs_search_get('GIPHY_TOKEN', query, limit=3, rating='g')
 		list = list(response.data)
 		gif = random.choices(lst)
 
@@ -42,6 +42,6 @@ async def magic_eight_ball(ctx)
 	gif = awaot search_gifs('cheese')
 
 	await ctx.send(randomw.choice(response))
-	await ctx.send('Gif URL : ' + gif)
+	await ctx.send('Gif URL : ' + giof)
 
 bot.run(os.environ['DISCORD_TOKEN'])
